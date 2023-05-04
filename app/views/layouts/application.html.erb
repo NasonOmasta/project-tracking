@@ -1,6 +1,8 @@
+<!-- Inspiration: https://www.w3schools.com/  -->
 <!DOCTYPE html>
 <html>
-  <head>
+  <head> 
+  
     <title>ProjectTracking</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
@@ -10,7 +12,15 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body> 
+    <nav class="navbar navbar-expand-lg sticky-lg-top bg-secondary bg-gradiant"> 
+      <div class="container-fluid">
+        <%= link_to "Home", "/pages/home" %> 
+        <%= link_to "Contact", "/pages/contact" %> 
+      </div>
+    </nav> 
+    <div class="container-fluid"
+    <%= yield %> 
+    </div>
   </body>
 </html>
